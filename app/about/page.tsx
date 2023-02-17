@@ -12,9 +12,5 @@ async function getData() {
 export default async function About() {
   const { md } = await getData();
 
-  return (
-    <p>
-      <ReactMarkdown>{md}</ReactMarkdown>
-    </p>
-  );
+  return <ReactMarkdown>{md}</ReactMarkdown>;
 }

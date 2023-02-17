@@ -1,3 +1,4 @@
+import Header from "./components/header";
 import "./globals.css";
 
 export default function RootLayout({
@@ -10,7 +11,7 @@ export default function RootLayout({
       <head />
       <body className="bg-zinc-900 text-white font-mono">
         <div className="min-w-full min-h-screen flex flex-col items-stretch justify-start">
-          <header></header>
+          <Header />
           <main className="flex-grow flex flex-col items-center justify-center relative">
             {children}
           </main>

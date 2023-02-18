@@ -1,6 +1,7 @@
 import "./globals.css";
 import { JetBrains_Mono } from "@next/font/google";
 import Header from "./components/header";
+import { AnalyticsWrapper } from "./components/analytics";
 
 export const revalidate = 604800; // revalidate every 604800 seconds (1 week)
 
@@ -21,6 +22,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
+        <AnalyticsWrapper />
       </body>
     </html>
   );

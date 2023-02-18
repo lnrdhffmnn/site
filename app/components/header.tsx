@@ -51,7 +51,7 @@ export default function Header() {
           onMouseEnter={() => setCurrentHover(item.href)}
         >
           <span>{item.icon}</span>
-          <span>{item.label}</span>
+          <span className="hidden md:inline">{item.label}</span>
           {currentPath === item.href && (
             <motion.div
               layoutId="path"
@@ -69,7 +69,7 @@ export default function Header() {
                 ease: "easeInOut",
                 duration: 0.2,
               }}
-              className="absolute bottom-0 w-full h-full bg-zinc-800 rounded-md shadow-sm -z-10"
+              className="absolute bottom-0 w-full h-full bg-zinc-800 rounded-md shadow-sm -z-10 hidden md:block"
             />
           )}
         </Link>

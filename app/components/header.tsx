@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface MenuItem {
   icon: string;
@@ -23,11 +23,20 @@ export default function Header() {
       label: "Sobre",
       href: "/about",
     },
+    {
+      icon: "💼",
+      label: "Projetos",
+      href: "/projects",
+    },
   ];
 
   const currentPath = usePathname();
 
   const [currentHover, setCurrentHover] = useState(currentPath);
+
+  useEffect(() => {
+    setCurrentHover(currentPath);
+  }, [currentPath]);
 
   return (
     <header

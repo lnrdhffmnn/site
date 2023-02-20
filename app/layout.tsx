@@ -3,7 +3,14 @@ import { JetBrains_Mono } from "@next/font/google";
 import Header from "./components/header";
 import { AnalyticsWrapper } from "./components/analytics";
 
-export const revalidate = 604800; // revalidate every 604800 seconds (1 week)
+export const revalidate = 86400; // revalidate every 86400 seconds (1 day)
+
+export const metadata = {
+  title: {
+    default: "Leonardo Hoffmann Belous",
+    template: "%s | Leonardo Hoffmann Belous",
+  },
+};
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 

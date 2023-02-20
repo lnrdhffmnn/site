@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Página inicial",
+};
+
 export default function Home() {
   return (
     <>

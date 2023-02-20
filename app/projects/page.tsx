@@ -1,6 +1,10 @@
 import { Project } from "@/types";
 import Card from "../components/card";
 
+export const metadata = {
+  title: "Projetos",
+};
+
 async function getData() {
   const res = await fetch("https://api.github.com/users/lnrdhffmnn/repos");
   const json = (await res.json()) as Project[];

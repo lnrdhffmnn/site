@@ -1,5 +1,9 @@
 import ReactMarkdown from "react-markdown";
 
+export const metadata = {
+  title: "Sobre",
+};
+
 async function getData() {
   const res = await fetch(
     "https://raw.githubusercontent.com/lnrdhffmnn/lnrdhffmnn/main/README.md"

@@ -15,7 +15,7 @@ export default function Card({ project }: Props) {
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            {project.name}
+            {project.name.replaceAll("-", " ")}
           </a>
         </h1>
         <div className="flex gap-1">

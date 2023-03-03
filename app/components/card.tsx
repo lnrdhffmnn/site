@@ -1,7 +1,8 @@
-import { Project } from "@/types";
+import { Project } from "@/app/types";
+import { z } from "zod";
 
 interface Props {
-  project: Project;
+  project: z.infer<typeof Project>;
 }
 
 export default function Card({ project }: Props) {

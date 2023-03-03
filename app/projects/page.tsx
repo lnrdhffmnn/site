@@ -1,4 +1,4 @@
-import { Project } from "@/types";
+import { Project } from "@/app/types";
 import Card from "../components/card";
 
 export const metadata = {
@@ -7,21 +7,16 @@ export const metadata = {
 
 async function getData() {
   const res = await fetch("https://api.github.com/users/lnrdhffmnn/repos");
-  const json = (await res.json()) as Project[];
+  const json = await res.json();
 
-  const projects: Project[] = json.map(project => ({
-    name: project.name,
-    description: project.description,
-    language: project.language,
-    stargazers_count: project.stargazers_count,
-    homepage: project.homepage,
-    html_url: project.html_url,
-    topics: project.topics,
-  }));
+  const projects = Project.array().parse(json);
 
   const blacklist = ["lnrdhffmnn", "site"];
+  const filteredProjects = projects.filter(
+    project => !blacklist.includes(project.name)
+  );
 
-  return projects.filter(project => !blacklist.includes(project.name));
+  return filteredProjects;
 }
 
 export default async function Projects() {

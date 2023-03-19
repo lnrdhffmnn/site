@@ -1,5 +1,5 @@
 import "./globals.css";
-import { JetBrains_Mono } from "@next/font/google";
+import "@fontsource/jetbrains-mono/latin.css";
 import Header from "./components/header";
 import { AnalyticsWrapper } from "./components/analytics";
 
@@ -12,11 +12,6 @@ export const metadata = {
   },
 };
 
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-});
-
 export default function RootLayout({
   children,
 }: {
@@ -25,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head />
-      <body
-        className={`bg-zinc-900 text-white font-mono ${jetBrainsMono.variable}`}
-      >
+      <body className="bg-zinc-900 text-white font-mono">
         <div className="min-w-full min-h-screen flex flex-col items-stretch justify-start">
           <Header />
           <main className="flex-grow flex flex-col items-center justify-center relative px-8 py-2 w-full max-w-[1000px] mx-auto">

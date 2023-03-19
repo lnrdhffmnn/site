@@ -1,4 +1,4 @@
-import { Project } from "@/app/types";
+import { Project } from "../models/project";
 import { z } from "zod";
 
 interface Props {

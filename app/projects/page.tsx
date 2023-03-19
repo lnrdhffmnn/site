@@ -1,4 +1,4 @@
-import { Project } from "@/app/types";
+import { Project } from "../models/project";
 import Card from "../components/card";
 
 export const metadata = {

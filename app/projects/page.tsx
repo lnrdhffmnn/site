@@ -11,7 +11,7 @@ async function getData() {
 
   const projects = Project.array().parse(json);
 
-  const blacklist = ["lnrdhffmnn", "site"];
+  const blacklist = ["lnrdhffmnn", "site", "Trabalho-T.C"];
   const filteredProjects = projects.filter(
     project => !blacklist.includes(project.name)
   );

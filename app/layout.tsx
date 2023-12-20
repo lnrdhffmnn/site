@@ -2,6 +2,7 @@ import "./globals.css";
 import "@fontsource/jetbrains-mono/latin.css";
 import Header from "./components/header";
 import { AnalyticsWrapper } from "./components/analytics";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const revalidate = 86400; // revalidate every 86400 seconds (1 day)
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           </main>
         </div>
         <AnalyticsWrapper />
+        <SpeedInsights />
       </body>
     </html>
   );
